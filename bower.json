@@ -1,0 +1,17 @@
+{
+  "name": "boottoast.js",
+  "main": "./boottoast.js",
+  "license": "MIT",
+  "ignore": [
+    "CHANGELOG.md",
+    "CONTRIBUTING",
+    "Gruntfile.js",
+    "header.txt",
+    "karma*.js",
+    "build",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": ">= 4.0.0"
+  }
+}

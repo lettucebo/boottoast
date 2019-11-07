@@ -1,0 +1,22 @@
+{
+  "name": "lettucebo/boottoast",
+  "type": "component",
+  "description": "Wrappers for JavaScript alert(), confirm() and other flexible dialogs using the Bootstrap framework",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Money Yu",
+      "email": "abc12207@gmail.com"
+    }
+  ],
+  "require": {
+    "components/bootstrap": "*"
+  },
+  "extra": {
+    "component": {
+      "scripts": [
+        "boottoast.js",
+      ]
+    }
+  }
+}
