@@ -1,4 +1,4 @@
-# BootToast - Bootstrap powered toast and flexible dialog boxes
+# Bootbox - Bootstrap powered alert, confirm and flexible dialog boxes
 
 Please see http://bootboxjs.com for full usage instructions, or head over to http://paynedigital.com/bootbox for
 the original writeup about the project.
@@ -27,11 +27,17 @@ pull requests **please** ensure your tests pass as failing requests will be reje
 
 ## A note on Bootstrap dependencies
 
-BootToast **require** Bootstrap 4.2.0 or above.
+Bootbox **5.0.0** is the first release to support Bootstrap 4.0.0.
 
-## 0.0.1 (Latest Release)
+Bootbox **4.0.0** is the first release to support Bootstrap 3.0.0.
 
-- First release
+Bootbox **3.3.0** is the *last* release to support Bootstrap 2.2.x.
+
+Much more dependency information can be found [on the Bootbox website](http://bootboxjs.com/getting-started.html#bootbox-dependencies).
+
+## 5.3.4 (Latest Release)
+
+- Removes `':first'` selector from default button binding
 
 For a full list of releases and changes please see [the changelog](https://github.com/makeusabrew/bootbox/blob/master/CHANGELOG.md).
 
