@@ -1,5 +1,5 @@
 /**
- * boottoast.js 0.0.1
+ * boottoast.js 0.0.2
  *
- * http://boottaost.dev/license.txt
+ * http://boottoast.dev
  */

@@ -1,9 +1,9 @@
 /*! @preserve
  * boottoast.js
- * version: 0.0.1
+ * version: 0.0.2
  * author: Money Yu <abc12207@gmail.com>
  * license: MIT
- * http://boottoastjs.com/
+ * http://boottoast.dev/
  */
 (function(root, factory) {
     "use strict";
