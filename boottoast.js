@@ -170,7 +170,7 @@
             positionContainer === null ||
             positionContainer.length === 0
         ) {
-            var styleStr = "position: absolute; ";
+            var styleStr = "position: fixed; ";
             if (options.horizontalPlacement === "left") {
                 styleStr += " left: 0; margin-left: 20px; ";
             } else if (options.horizontalPlacement === "right") {
@@ -192,6 +192,8 @@
                     "verticalPlacement must be top, center or buttom."
                 );
             }
+
+            styleStr += " z-index:9999; "
 
             positionContainer = $("<div>", {
                 class: positionDivClass,

@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      Examples | BootToast.js &mdash; flexible toast for the Bootstrap framework
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <style></style>
+
+    <script>
+      //GA
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" style="margin-left: 5rem;" href="#"
+          >BootToast</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="form-inline mt-2 mt-md-0">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Examples</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-md-3">
+            <nav
+              id="navbar-examples"
+              class="navbar navbar-light bg-light sticky-top"
+              style="padding-top:6rem;"
+            >
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#item-alert">Alert</a>
+                <a class="nav-link" href="#item-primary">Primary</a>
+                <a class="nav-link" href="#item-secondary">Secondary</a>
+                <a class="nav-link" href="#item-success">Success</a>
+                <a class="nav-link" href="#item-danger">Danger</a>
+                <a class="nav-link" href="#item-warning">Warning</a>
+                <a class="nav-link" href="#item-info">Info</a>
+                <a class="nav-link" href="#item-light">Light</a>
+                <a class="nav-link" href="#item-dark">Dark</a>
+              </nav>
+            </nav>
+          </div>
+          <div class="col-md-9">
+            <div
+              data-spy="scroll"
+              data-target="#navbar-example"
+              data-offset="0"
+            >
+              <h3 id="item-alert">Alert</h3>
+
+              <div class="container">
+                <h5>Basic usage</h5>
+                <button class="btn btn-primary" onclick="showAlert()">
+                  RUN EXAMPLE
+                </button>
+                <br />
+                <br />
+                <pre>
+                  <code class="language-js">boottoast.alert("This is a simple toast!");</code>
+                </pre>
+              </div>
+              <br />
+              <div class="container">
+                <h5>Basic usage, using options object</h5>
+                <button
+                  class="btn btn-primary"
+                  onclick="showAlertWithOptions()"
+                >
+                  RUN EXAMPLE
+                </button>
+                <br />
+                <br />
+                <pre>
+                  <code class="language-js">
+                    boottoast.alert({
+                      message: "This is a toast with config options!", 
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000 });
+                    </code>
+                </pre>
+              </div>
+              <br />
+              <div class="container">
+                <h5>Basic usage, using all options object</h5>
+                <button
+                  class="btn btn-primary"
+                  onclick="showAlertWithAllOptions()"
+                >
+                  RUN EXAMPLE
+                </button>
+                <br />
+                <br />
+                <pre>
+                  <code class="language-js">
+                    boottoast.alert({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      // additional class string applied to the top level dialog
+                      className: null,
+                      // whether or not to include a close button
+                      closeButton: true,
+                      // dialog container
+                      container: "body",
+                      // Horizontal placement: left, right, only works for first time when create container
+                      horizontalPlacement: "left",
+                      // Vertical placement: top, bottom, right, only works for first time when create container
+                      verticalPlacement: "bottom",
+                      // Delay hiding the toast (ms)
+                      delay: 2000
+                    });
+                    </code>
+                </pre>
+
+                <hr />
+
+                <h3 id="item-primary">Primary</h3>
+
+                <div class="container">
+                  <h5>Basic usage</h5>
+                  <button class="btn btn-primary" onclick="showPrimary()">
+                    RUN EXAMPLE
+                  </button>
+                  <br />
+                  <br />
+                  <pre>
+                  <code class="language-js">
+                    boottoast.primary("This is a simple toast!");
+
+                    // or
+
+                    boottoast.primary({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000
+                    });
+                  </code>
+                </pre>
+                </div>
+
+                <hr />
+
+                <h3 id="item-secondary">Secondary</h3>
+
+                <div class="container">
+                  <h5>Basic usage</h5>
+                  <button class="btn btn-secondary" onclick="showSecondary()">
+                    RUN EXAMPLE
+                  </button>
+                  <br />
+                  <br />
+                  <pre>
+                  <code class="language-js">
+                    boottoast.secondary("This is a simple toast!");
+
+                    // or
+
+                    boottoast.secondary({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000
+                    });
+                  </code>
+                </pre>
+                </div>
+
+                <hr />
+
+                <h3 id="item-success">Success</h3>
+
+                <div class="container">
+                  <h5>Basic usage</h5>
+                  <button class="btn btn-success" onclick="showSuccess()">
+                    RUN EXAMPLE
+                  </button>
+                  <br />
+                  <br />
+                  <pre>
+                  <code class="language-js">
+                    boottoast.success("This is a simple toast!");
+
+                    // or
+
+                    boottoast.success({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000
+                    });
+                  </code>
+                </pre>
+                </div>
+
+                <hr />
+
+                <h3 id="item-danger">Danger</h3>
+
+                <div class="container">
+                  <h5>Basic usage</h5>
+                  <button class="btn btn-danger" onclick="showDanger()">
+                    RUN EXAMPLE
+                  </button>
+                  <br />
+                  <br />
+                  <pre>
+                  <code class="language-js">
+                    boottoast.danger("This is a simple toast!");
+
+                    // or
+
+                    boottoast.danger({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000
+                    });
+                  </code>
+                </pre>
+                </div>
+
+                <hr />
+
+                <h3 id="item-warning">Warning</h3>
+
+                <div class="container">
+                  <h5>Basic usage</h5>
+                  <button class="btn btn-warning" onclick="showWarning()">
+                    RUN EXAMPLE
+                  </button>
+                  <br />
+                  <br />
+                  <pre>
+                  <code class="language-js">
+                    boottoast.warning("This is a simple toast!");
+
+                    // or
+
+                    boottoast.warning({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000
+                    });
+                  </code>
+                </pre>
+                </div>
+
+                <hr />
+
+                <h3 id="item-info">Info</h3>
+
+                <div class="container">
+                  <h5>Basic usage</h5>
+                  <button class="btn btn-info" onclick="showInfo()">
+                    RUN EXAMPLE
+                  </button>
+                  <br />
+                  <br />
+                  <pre>
+                  <code class="language-js">
+                    boottoast.info("This is a simple toast!");
+
+                    // or
+
+                    boottoast.info({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000
+                    });
+                  </code>
+                </pre>
+                </div>
+
+                <hr />
+
+                <h3 id="item-light">Light</h3>
+
+                <div class="container">
+                  <h5>Basic usage</h5>
+                  <button class="btn btn-light" onclick="showLight()">
+                    RUN EXAMPLE
+                  </button>
+                  <br />
+                  <br />
+                  <pre>
+                  <code class="language-js">
+                    boottoast.dark("This is a simple toast!");
+
+                    // or
+
+                    boottoast.dark({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000
+                    });
+                  </code>
+                </pre>
+                </div>
+
+                <hr />
+
+                <h3 id="item-dark">Dark</h3>
+
+                <div class="container">
+                  <h5>Basic usage</h5>
+                  <button class="btn btn-dark" onclick="showDark()">
+                    RUN EXAMPLE
+                  </button>
+                  <br />
+                  <br />
+                  <pre>
+                  <code class="language-js">
+                    boottoast.dark("This is a simple toast!");
+
+                    // or
+
+                    boottoast.dark({
+                      message: "This is a toast with config options!",
+                      title: "Big title",
+                      smallTitle: "11 min ago",
+                      delay: 5000
+                    });
+                  </code>
+                </pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+        <!-- /END THE FEATURETTES -->
+      </div>
+      <!-- /.container -->
+
+      <!-- FOOTER -->
+      <footer class="container"></footer>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>'
+        );
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+      integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/boottoast.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/example.js"></script>
+  </body>
+</html>
