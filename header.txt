@@ -1,5 +1,5 @@
 /**
- * boottoast.js 0.0.2
+ * boottoast.js 0.0.3
  *
- * http://boottoast.dev
+ * https://lettucebo.github.io/boottoast/
  */
